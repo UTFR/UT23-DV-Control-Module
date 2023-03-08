@@ -10,7 +10,7 @@ The Driverless Control Module includes many different components such as a Teens
 
 ## Schematic Design
 
-The driverless control module distributes 4 voltage levels: 14.8V, 12V, 5V, and 3.3V. The 14.8V comes straight from the battery and is intended for brakes and steering as well as the shutdown circuit. The 12V is distributed to the system status indicator LEDs and speaker, the 5V is for the Teensy 4.1 microcontroller, and the 3.3V is for the CAN transcievers. 
+The driverless control module distributes 4 voltage levels: 14.8V, 12V, 5V, and 3.3V. The 14.8V comes straight from the battery and is intended for brakes and steering as well as the shutdown circuit. The 12V is distributed to the system status indicator LEDs and speaker, the 5V is for the Teensy 4.1 microcontroller, and the 3.3V is for the CAN transcievers. You may also notice that there are plenty of LEDs and testing points. These are purely for debugging during testing and serve no other purpose.
 
 ![image](https://user-images.githubusercontent.com/59676679/223592019-46f80a8a-3806-4618-8f5a-b876acea4864.png)
 
@@ -25,14 +25,12 @@ The UTFR team uses the Teensy 4.1 microcontroler that boasts a 600 Mhz ARM proce
 In addition to simply sending out signals, the Teensy is programmed to monitor all of its signals to provide adaptive feedback. We constantly monitor the battery voltage to avoid loading too much stress to the battery and low voltage system throughout the car, we check brake voltage to see if autonomous braking is possible and brake pressure to see how hard we're pressing the brakes, and we read how much current is flowing through the autonomous system indicators to confirm the signal was sent and the connection is stable. Due to its robustness to noise, we also use the sensor CAN bus to read safety critical sensor data collected from other parts of the car. Shown below is the UT23 CAN architecture diagram. 
 
 ![image](https://user-images.githubusercontent.com/82067858/210156016-07d12071-6ed7-4ffc-8136-203345e28255.png)
- 
-You may also notice that there are plenty of LEDs and testing points. These are purely for debugging during testing and serve no other purpose.
 
 ## PCB Layout
 
 ![image](https://user-images.githubusercontent.com/59676679/223591426-7f8ed4a5-1224-4959-9243-3dcb0d762767.png)
 
-The Driverless Control Module is a four-layer board designed using Altium Designer. The four layers include a high-frequency digital signal and power top layer, a power and ground second layer, a grounded third layer, and an analog and low-frequency signal bottom layer. Differential signals were routed near each other, and other high-frequency signals were routed in a manner that considered adequate spacing and reducing trace length. A substantial effort was placed in making a user-friendly silkscreen to ensure the correct and safe fabrication and operation of the board.
+The Driverless Control Module is a four-layer board designed using Altium Designer. The four layers include a high-frequency digital signal and power top layer, a power and ground second layer, a grounded third layer, and an analog and low-frequency signal bottom layer. Differential signals were routed near each other, and other high-frequency signals were routed in a manner that considered adequate spacing and reducing trace length. A substantial effort was placed in making a user-friendly silkscreen to ensure the correct and safe fabrication, assembly and operation of the board.
  
 ## JLCPCB
 
