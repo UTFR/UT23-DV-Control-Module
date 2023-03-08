@@ -4,8 +4,8 @@ By: Muaz Shash, Drivierless Team Member, University of Toronto Formula Racing Te
 
 With the start of the 2023 Formula Student season, the University of Toronto Formula Racing Team (UTFR) has established an all new department: Drivierless, a team responsible for developing an autonomous system that can operate our vehicle to score even more points at competition and secure our spot on the podium. And like all other systems in our car, driverless also requires an electronic controller to interface with the real world. The driverless controller is responsible for all the critical control and safety decisions related to autonomous tasks such as controlling visual and audial system status indicators, stepping up/down voltages, managing if and when power is delivered to steering, braking and throttle, as well as communicating with the rest of the car and its electric system over multiple CAN Busses. 
 
-![PCB](https://user-images.githubusercontent.com/59676679/223560323-b228d0bd-7772-495a-933f-2677bc976b82.png) 
- 
+<img src="https://user-images.githubusercontent.com/59676679/223560323-b228d0bd-7772-495a-933f-2677bc976b82.png" width=50% height=50%>
+
 The Driverless Control Module includes many different components such as a Teensy 4.1, two CAN transceivers, a 12V switching regulator, a 5V linear regulators, a 3V3 linear regulator and a series of relays and MOSfet circuits. In this article, I will provide a high level overview of how the driverless controller manages power and responds to autonomous commands.
 
 ## Schematic Design
@@ -27,8 +27,7 @@ In addition to simply sending out signals, the Teensy is programmed to monitor a
 ![image](https://user-images.githubusercontent.com/82067858/210156016-07d12071-6ed7-4ffc-8136-203345e28255.png)
 
 ## PCB Layout
-
-![image](https://user-images.githubusercontent.com/59676679/223591426-7f8ed4a5-1224-4959-9243-3dcb0d762767.png)
+<img src="https://user-images.githubusercontent.com/59676679/223591426-7f8ed4a5-1224-4959-9243-3dcb0d762767.png" width=50% height=50%>
 
 The Driverless Control Module is a four-layer board designed using Altium Designer. The four layers include a high-frequency digital signal and power top layer, a power and ground second layer, a grounded third layer, and an analog and low-frequency signal bottom layer. Differential signals were routed near each other, and other high-frequency signals were routed in a manner that considered adequate spacing and reducing trace length. A substantial effort was placed in making a user-friendly silkscreen to ensure the correct and safe fabrication, assembly and operation of the board.
  
